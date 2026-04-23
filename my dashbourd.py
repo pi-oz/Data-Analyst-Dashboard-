@@ -134,7 +134,6 @@ def coorelation():
         sns.heatmap(correlation,annot=True,cmap="viridis")
         plt.show()
 
-# def export()
 # --------------------------------------------------Front--------------------------------------------------
 # ---------------------------------------------------------------------------------------------------------
 root=tk.Tk()
@@ -158,7 +157,8 @@ style.map("TButton",
           background=[("active", "darkgreen")])
 
 notebook=ttk.Notebook(root)
-notebook.pack(expand=True,fill="both")#both refer to expand it both axis x & y.
+notebook.pack(expand=True,fill="both")
+
 # each frame is new tab
 tab1=ttk.Frame(notebook)
 tab2=ttk.Frame(notebook)
@@ -239,4 +239,6 @@ output2=tk.Text(tab3,height=33,width=167)
 output2.place(x=10,y=130)
 statics=ttk.Button(tab3,text="Get Statics",command=statics).place(x=180,y=29)
 corr_button=ttk.Button(tab3,text="Co-relation",command=coorelation).place(x=300,y=29)
+
+# looping the window
 root.mainloop()
